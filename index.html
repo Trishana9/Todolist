@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title> Javascript Modal</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="script.js"></script>
+  </head>
+  <body class="bg-emerald-100 h-screen flex flex-col items-center justify-center">
+    <div class="flex items-center pb-7">
+      <img src="images/lightning-bolt.png">
+      <h1 class="text-2xl font-bold pl-2 ">My Tasks</h1>
+    </div>
+      <div class="w-[536px] bg-white ">
+
+          <div class="flex items-center h-16 bg-slate-50 justify-center ">
+              <input class="bg-transparent border border-transparent outline-none w-96 mr-3" type="text" name="todo" id="inputField" placeholder="Type task name here" >
+              <button class=" bg-emerald-100 text-white flex h-10 w-[104px] justify-center items-center" id="addToDo"><img class="pr-2" src="images/add_task_FILL1_wght500_GRAD-25_opsz24 1.png"> Create</button>
+            </div>
+            <div class="pl-5">
+              <p class="text-sm font-bold ">Tasks</p>
+             <div id="toDoContainer">
+
+             </div>
+          </div>
+
+      </div>
+
+  </body>
+  </html>
