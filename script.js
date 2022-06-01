@@ -2,12 +2,14 @@ let addToDoButton = document.getElementById('addToDo');
 let toDoContainer = document.getElementById('toDoContainer');
 let inputField = document.getElementById('inputField');
 
-inputField.addEventListener('click', function(){
-    
+inputField.addEventListener('input', function(){
+    addToDoButton.classList.add('bg-emerald-600')
 
 })
 
+
 addToDoButton.addEventListener('click', function(){
+    addToDoButton.classList.remove('bg-emerald-600')
 
     if (inputField.value == null || inputField.value == "") return
       
@@ -22,6 +24,19 @@ addToDoButton.addEventListener('click', function(){
     // Assigning the attributes
     // to created checkbox
     checkbox.type = "checkbox";
+    checkbox.name = "checkbox";
+    checkbox.id = "checkbox";
+
+    // added the classes to the checkbox
+    checkbox.classList.add('mr-3')
+    checkbox.classList.add('my-2')
+    checkbox.classList.add('text-emerald-500')
+    checkbox.classList.add('focus:ring-0')
+    checkbox.classList.add('focus:ring-offset-0')
+    checkbox.classList.add('rounded-full')
+    checkbox.classList.add('h-7')
+    checkbox.classList.add('w-7')
+
 
     // appending the inputed value to the label tag 
     label.appendChild(document.createTextNode(inputField.value));
