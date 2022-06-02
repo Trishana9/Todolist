@@ -3,7 +3,7 @@ let toDoContainer = document.getElementById('toDoContainer');
 let inputField = document.getElementById('inputField');
 
 inputField.addEventListener('input', function(){
-    addToDoButton.classList.add('bg-emerald-600')
+    addToDoButton.classList.add('bg-emerald-600');
 
 })
 
@@ -28,18 +28,23 @@ addToDoButton.addEventListener('click', function(){
     checkbox.id = "checkbox";
 
     // added the classes to the checkbox
-    checkbox.classList.add('mr-3')
-    checkbox.classList.add('my-2')
-    checkbox.classList.add('text-emerald-500')
-    checkbox.classList.add('focus:ring-0')
-    checkbox.classList.add('focus:ring-offset-0')
-    checkbox.classList.add('rounded-full')
-    checkbox.classList.add('h-7')
-    checkbox.classList.add('w-7')
+    checkbox.classList.add('mr-3');
+    checkbox.classList.add('my-2');
+    checkbox.classList.add('text-emerald-500');
+    checkbox.classList.add('focus:ring-0');
+    checkbox.classList.add('focus:ring-offset-0');
+    checkbox.classList.add('rounded-full');
+    checkbox.classList.add('border-slate-200');
+    checkbox.classList.add('h-6');
+    checkbox.classList.add('w-6');
 
 
     // appending the inputed value to the label tag 
     label.appendChild(document.createTextNode(inputField.value));
+
+
+    label.classList.add('text-slate-700');
+    label.classList.add('text-lg');
       
     // appending the checkbox and label to div
     toDoContainer.appendChild(checkbox);
@@ -50,8 +55,10 @@ addToDoButton.addEventListener('click', function(){
     checkbox.addEventListener('click', function(){
         if(label.classList.contains('line-through')){
             label.classList.remove('line-through')
+            label.classList.remove('text-slate-400');
         }else{
             label.classList.add('line-through')
+            label.classList.add('text-slate-400');
         }
     })
 
@@ -60,9 +67,11 @@ addToDoButton.addEventListener('click', function(){
         if(label.classList.contains('line-through')){
             checkbox.checked = false;
             label.classList.remove('line-through');
+            label.classList.remove('text-slate-400');
         }else{
             checkbox.checked = true;
             label.classList.add('line-through');
+            label.classList.add('text-slate-400');
         }
     })
 })
