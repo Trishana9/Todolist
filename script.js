@@ -56,9 +56,13 @@ addToDoButton.addEventListener('click', function(){
         if(label.classList.contains('line-through')){
             label.classList.remove('line-through')
             label.classList.remove('text-slate-400');
+
         }else{
             label.classList.add('line-through')
             label.classList.add('text-slate-400');
+            label.classList.add('transition-all');
+            label.classList.add('duration-300');
+            label.classList.add('ease-in-out');
         }
     })
 
@@ -72,6 +76,9 @@ addToDoButton.addEventListener('click', function(){
             checkbox.checked = true;
             label.classList.add('line-through');
             label.classList.add('text-slate-400');
+            label.classList.add('transition-all');
+            label.classList.add('duration-300');
+            label.classList.add('ease-in-out');
         }
     })
 })
