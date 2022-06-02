@@ -2,7 +2,7 @@ let addToDoButton = document.getElementById('addToDo');
 let toDoContainer = document.getElementById('toDoContainer');
 let inputField = document.getElementById('inputField');
 
-inputField.addEventListener('input', function(){
+inputField.addEventListener('focus', function(){
     addToDoButton.classList.add('bg-emerald-600');
 
 })
