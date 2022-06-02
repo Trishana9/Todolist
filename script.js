@@ -7,6 +7,11 @@ inputField.addEventListener('focus', function(){
 
 })
 
+inputField.addEventListener('blur', function(){
+    addToDoButton.classList.remove('bg-emerald-600');
+
+})
+
 
 addToDoButton.addEventListener('click', function(){
     addToDoButton.classList.remove('bg-emerald-600')
