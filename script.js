@@ -42,7 +42,7 @@ addToDoButton.addEventListener('click', function(){
     // appending the inputed value to the label tag 
     label.appendChild(document.createTextNode(inputField.value));
 
-
+    // added the classes to the label
     label.classList.add('text-slate-700');
     label.classList.add('text-lg');
       
