@@ -10,6 +10,22 @@ showData();
     
 // }) 
 
+inputField.addEventListener('input',()=>{
+    addToDoButton.classList.add('bg-emerald-600');
+    // addToDoButton.disabled = false
+    let item = inputField.value;
+
+    if(item.length > 0){
+        errorMsg.removeChild(emsg);
+        addToDoButton.classList.add('bg-emerald-600');
+
+    }
+    else{
+        addToDoButton.classList.remove('bg-emerald-600');
+    }
+    
+})
+
 addToDoButton.addEventListener('click', () => {
     addToDoButton.classList.remove('bg-emerald-600');
 
@@ -102,22 +118,6 @@ function showData(){
             }
         })
 
-
-        inputField.addEventListener('input',()=>{
-            addToDoButton.classList.add('bg-emerald-600');
-            // addToDoButton.disabled = false
-            let item = inputField.value;
-        
-            if(item.length > 0){
-                errorMsg.removeChild(emsg);
-                addToDoButton.classList.add('bg-emerald-600');
-        
-            }
-            else{
-                addToDoButton.classList.remove('bg-emerald-600');
-            }
-            
-        })
     }
   }
 
