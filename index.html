@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com/"></script>
     <link href="https://unpkg.com/@tailwindcss/forms@0.2.1/dist/forms.min.css" rel="stylesheet">
-   <link rel="stylesheet" href="css/style.css">
     <script defer src="script.js"></script>
   </head>
   <body class="bg-emerald-100 h-screen flex flex-col items-center justify-center">
@@ -16,15 +15,18 @@
     </div>
       <div class="w-[536px] bg-white shadow-md">
 
-          <div class="flex items-center h-16 bg-slate-50 justify-center ">
-              <input class="bg-transparent border border-transparent  w-96 mr-3 focus:outline-none focus:ring-0 focus:border-transparent" type="text" name="todo" id="inputField" placeholder="Type task name here ..." >
-              <button class=" bg-emerald-100 text-white flex h-10 w-[104px] justify-center items-center rounded" id="addToDo"><img class="pr-2" src="images/add_task_FILL1_wght500_GRAD-25_opsz24 1.png"> Create</button>
+          <div class="flex  h-20 bg-slate-50 justify-center pt-3">
+            <div id="inputSection">
+              <input class="bg-transparent border border-transparent w-96 mr-3 focus:outline-none focus:ring-0 focus:border-transparent" type="text" name="todo" id="inputField" placeholder="Type task name here ..." >             
+            </div>  
+            <button class=" bg-emerald-100 text-white flex h-10 w-[104px] justify-center items-center rounded" id="addToDo"><img class="pr-2" src="images/add_task_FILL1_wght500_GRAD-25_opsz24 1.png"> Create</button>
             </div>
             <div class="pl-5 pt-5 pb-10">
               <p class="text-sm font-bold ">Tasks</p>
              <div id="toDoContainer">
              </div>
           </div>
+          
 
       </div>
 
